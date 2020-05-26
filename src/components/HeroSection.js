@@ -25,7 +25,9 @@ const HeroSection = () => {
                     "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
                 }}
               >
-                <strong>Simple, Beautiful, Elegant</strong>
+                <strong>
+                  <center>Simple, Beautiful, Elegant</center>
+                </strong>
               </IonCardHeader>{" "}
               <IonCardContent
                 style={{
@@ -33,7 +35,10 @@ const HeroSection = () => {
                     "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
                 }}
               >
-                Web Design
+                <center>Web Design</center>
+                <div style={{ paddingTop: "10px" }} className="social-links">
+                  <center>Social</center>
+                </div>
               </IonCardContent>
             </IonCard>
           </IonCol>
