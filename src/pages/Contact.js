@@ -8,7 +8,6 @@ import {
   IonCol,
   IonButton,
   IonItem,
-  IonRouterLink,
   IonLoading,
   IonTextarea,
   IonCard,
@@ -39,14 +38,6 @@ const ContactForm = (props) => {
 
   function handleCreateForm() {
     const { subject, name, phoneNumber, email, message } = values;
-
-    const newFormFill = {
-      subject,
-      name,
-      phoneNumber,
-      email,
-      message,
-    };
   }
 
   const [busy, setBusy] = React.useState(false);
@@ -58,7 +49,6 @@ const ContactForm = (props) => {
         <IonContent>
           <IonCard>
             <IonCardTitle
-              title="hello"
               style={{
                 paddingLeft: "20px",
                 paddingBottom: "10px",

@@ -25,11 +25,7 @@ const Home = () => {
       </IonHeader>
       <IonContent>
         <HeroSection />
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <IonHeader translucent="true"></IonHeader>
         <AboutMe />
         <IonGrid>
           <IonRow>

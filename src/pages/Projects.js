@@ -5,11 +5,8 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonGrid,
-  IonCol,
-  IonRow,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+
 import "./Tab2.css";
 import ReactCard from "../components/ReactCard";
 import PythonCard from "../components/PythonCard";
@@ -21,20 +18,18 @@ const Projects = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Home</IonTitle>
+          <IonTitle>Projects</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        <IonHeader translucent="true"></IonHeader>
         <ReactCard />
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
         <PythonCard />
 
         <WordpressCard />
+        <CsharpCard />
+        <CsharpCard />
+        <CsharpCard />
         <CsharpCard />
       </IonContent>
     </IonPage>

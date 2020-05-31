@@ -8,12 +8,10 @@ import {
   IonCol,
   IonButton,
   IonItem,
-  IonRouterLink,
   IonLoading,
 } from "@ionic/react";
 import useForm from "../hooks/useForm";
 
-import toast from "../helpers/toast";
 import validateContactForm from "../validators/validateContactForm";
 
 const INITIAL_STATE = {

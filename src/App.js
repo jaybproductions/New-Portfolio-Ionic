@@ -7,18 +7,12 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonListHeader,
   IonLabel,
-  IonButton,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import {
-  ellipse,
-  square,
-  triangle,
   homeOutline,
   trendingUpOutline,
-  documentOutline,
   documentTextOutline,
   chatbubbleOutline,
 } from "ionicons/icons";
@@ -45,6 +39,7 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import ToggleDark from "./components/ToggleDark";
 
 const App = () => (
   <IonApp>
@@ -55,7 +50,7 @@ const App = () => (
           <Route path="/projects" component={Projects} exact={true} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="top">
           <IonTabButton tab="tab1" href="/home">
@@ -73,6 +68,9 @@ const App = () => (
           <IonTabButton tab="tab4" href="/contact">
             <IonIcon icon={chatbubbleOutline} />
             <IonLabel>Contact</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab5">
+            <ToggleDark />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

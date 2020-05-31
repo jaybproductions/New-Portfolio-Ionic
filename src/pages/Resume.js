@@ -6,7 +6,6 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab3.css";
 
 const Resume = () => {
@@ -18,11 +17,7 @@ const Resume = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Resume</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <IonHeader translucent={true}></IonHeader>
       </IonContent>
     </IonPage>
   );

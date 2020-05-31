@@ -3,14 +3,13 @@ import {
   IonCardHeader,
   IonCardContent,
   IonCard,
-  IonImg,
-  IonPage,
-  IonContent,
   IonGrid,
   IonRow,
   IonCol,
+  IonIcon,
 } from "@ionic/react";
 import background from "../images/Lawrencium.jpg";
+import { logoGithub } from "ionicons/icons";
 const HeroSection = () => {
   return (
     <div>
@@ -38,6 +37,19 @@ const HeroSection = () => {
                 <center>Web Design</center>
                 <div style={{ paddingTop: "10px" }} className="social-links">
                   <center>Social</center>
+                  <center>
+                    {" "}
+                    <a
+                      href="https://github.com/jaybproductions"
+                      target="_blank"
+                    >
+                      <IonIcon
+                        className="github-icon"
+                        style={{ paddingTop: "10px", fontSize: "24px" }}
+                        icon={logoGithub}
+                      />
+                    </a>
+                  </center>
                 </div>
               </IonCardContent>
             </IonCard>
