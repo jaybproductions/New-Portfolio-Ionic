@@ -5,6 +5,7 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonFooter,
 } from "@ionic/react";
 
 import "./Tab2.css";
@@ -31,6 +32,13 @@ const Projects = () => {
         <CsharpCard />
         <CsharpCard />
         <CsharpCard />
+        <IonFooter>
+          <IonToolbar>
+            <IonTitle style={{ fontSize: "14px" }}>
+              <center>2020 JayBProd</center>
+            </IonTitle>
+          </IonToolbar>
+        </IonFooter>
       </IonContent>
     </IonPage>
   );

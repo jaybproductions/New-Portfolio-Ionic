@@ -14,6 +14,9 @@ import {
   IonCardContent,
   IonGrid,
   IonCardTitle,
+  IonFooter,
+  IonToolbar,
+  IonTitle,
 } from "@ionic/react";
 import useForm from "../hooks/useForm";
 
@@ -137,6 +140,13 @@ const ContactForm = (props) => {
               </IonCol>
             </IonRow>
           </IonGrid>
+          <IonFooter>
+            <IonToolbar>
+              <IonTitle style={{ fontSize: "14px" }}>
+                <center>2020 JayBProd</center>
+              </IonTitle>
+            </IonToolbar>
+          </IonFooter>
         </IonContent>
       </IonPage>
     </div>
