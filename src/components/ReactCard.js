@@ -1,5 +1,13 @@
 import React from "react";
-import { IonCardHeader, IonCardContent, IonCard } from "@ionic/react";
+import {
+  IonCardHeader,
+  IonCardContent,
+  IonCard,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonButton,
+} from "@ionic/react";
 
 const ReactCard = () => {
   return (
@@ -8,7 +16,21 @@ const ReactCard = () => {
         <IonCardHeader style={{ fontSize: "16px" }}>
           <strong>My React Projects</strong>
         </IonCardHeader>
-        <IonCardContent>Hello</IonCardContent>
+        <IonCardContent>
+          <h2>Featured React Project: Client Communication App</h2>
+          <IonGrid>
+            <IonCol>
+              <IonRow>
+                <IonButton color="primary" size="small">
+                  View on Github
+                </IonButton>
+                <IonButton color="primary" size="small">
+                  View More
+                </IonButton>
+              </IonRow>
+            </IonCol>
+          </IonGrid>
+        </IonCardContent>
       </IonCard>
     </div>
   );

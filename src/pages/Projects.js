@@ -29,9 +29,7 @@ const Projects = () => {
 
         <WordpressCard />
         <CsharpCard />
-        <CsharpCard />
-        <CsharpCard />
-        <CsharpCard />
+
         <IonFooter>
           <IonToolbar>
             <IonTitle style={{ fontSize: "14px" }}>
