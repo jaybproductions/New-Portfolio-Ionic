@@ -20,6 +20,7 @@ const HeroSection = () => {
               <IonCardHeader
                 style={{
                   fontSize: "16px",
+                  color: "white",
                   backgroundImage:
                     "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
                 }}
@@ -32,6 +33,7 @@ const HeroSection = () => {
                 style={{
                   backgroundImage:
                     "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+                  color: "white",
                 }}
               >
                 <center>Web Design</center>
