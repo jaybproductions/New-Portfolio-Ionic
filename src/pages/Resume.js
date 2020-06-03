@@ -19,14 +19,14 @@ const Resume = () => {
       </IonHeader>
       <IonContent>
         <IonHeader translucent={true}></IonHeader>
-        <IonFooter>
-          <IonToolbar>
-            <IonTitle style={{ fontSize: "14px" }}>
-              <center>2020 JayBProd</center>
-            </IonTitle>
-          </IonToolbar>
-        </IonFooter>
       </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonTitle style={{ fontSize: "14px" }}>
+            <center>2020 JayBProd</center>
+          </IonTitle>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };
