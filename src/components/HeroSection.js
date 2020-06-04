@@ -38,7 +38,6 @@ const HeroSection = () => {
               >
                 <center>Web Design</center>
                 <div style={{ paddingTop: "10px" }} className="social-links">
-                  <center>Social</center>
                   <center>
                     {" "}
                     <a
