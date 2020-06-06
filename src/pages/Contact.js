@@ -23,6 +23,7 @@ import useForm from "../hooks/useForm";
 import toast from "../helpers/toast";
 import validateContactForm from "../validators/validateContactForm";
 import "../css/Contact.css";
+import firebase from "../firebase";
 
 const INITIAL_STATE = {
   subject: "",
@@ -41,6 +42,16 @@ const ContactForm = (props) => {
 
   function handleCreateForm() {
     const { subject, name, phoneNumber, email, message } = values;
+
+    const newFormFill = {
+      subject: values.subject,
+      name: values.name,
+      phoneNumber: values.phoneNumber,
+      email: values.email,
+      message: values.message,
+    };
+
+    firebase.db.collection("contactforms").add(newFormFill);
   }
 
   const [busy, setBusy] = React.useState(false);
@@ -142,7 +153,8 @@ const ContactForm = (props) => {
           </IonGrid>
         </IonContent>
         <IonFooter>
-          <IonToolbar>
+          <IonToolbar color="primary">
+            {" "}
             <IonTitle style={{ fontSize: "14px" }}>
               <center>2020 JayBProd</center>
             </IonTitle>

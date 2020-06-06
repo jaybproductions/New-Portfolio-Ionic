@@ -11,6 +11,7 @@ import {
   IonLoading,
 } from "@ionic/react";
 import useForm from "../hooks/useForm";
+import firebase from "../firebase";
 
 import validateContactForm from "../validators/validateContactForm";
 
@@ -33,12 +34,14 @@ const ContactForm = (props) => {
     const { subject, name, phoneNumber, email, message } = values;
 
     const newFormFill = {
-      subject,
-      name,
-      phoneNumber,
-      email,
-      message,
+      subject: values.subject,
+      name: values.name,
+      phoneNumber: values.phoneNumber,
+      email: values.email,
+      message: values.message,
     };
+
+    firebase.db.collection("contactforms").add(newFormFill);
   }
 
   const [busy, setBusy] = React.useState(false);

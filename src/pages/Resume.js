@@ -21,7 +21,7 @@ const Resume = () => {
         <IonHeader translucent={true}></IonHeader>
       </IonContent>
       <IonFooter>
-        <IonToolbar>
+        <IonToolbar color="primary">
           <IonTitle style={{ fontSize: "14px" }}>
             <center>2020 JayBProd</center>
           </IonTitle>
