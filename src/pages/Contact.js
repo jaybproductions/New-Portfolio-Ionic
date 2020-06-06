@@ -52,6 +52,18 @@ const ContactForm = (props) => {
     };
 
     firebase.db.collection("contactforms").add(newFormFill);
+
+    firebase.db
+      .collection("jayblar@gmail.com")
+      .add({
+        to: "chris@btwebgroup.com",
+        message: {
+          subject: "Hello from Firebase!",
+          text: "This is the plaintext section of the email body.",
+          html: "This is the <code>HTML</code> section of the email body.",
+        },
+      })
+      .then(() => console.log("Queued email for delivery!"));
   }
 
   const [busy, setBusy] = React.useState(false);
