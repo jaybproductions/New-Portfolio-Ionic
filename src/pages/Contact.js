@@ -58,9 +58,9 @@ const ContactForm = (props) => {
       .add({
         to: "chris@btwebgroup.com",
         message: {
-          subject: "Hello from Firebase!",
-          text: "This is the plaintext section of the email body.",
-          html: "This is the <code>HTML</code> section of the email body.",
+          subject: values.subject,
+          text: "",
+          html: `Name: ${values.name} phone number: ${values.phoneNumber} email: ${values.email} message: ${values.message}`,
         },
       })
       .then(() => console.log("Queued email for delivery!"));
