@@ -24,6 +24,7 @@ import toast from "../helpers/toast";
 import validateContactForm from "../validators/validateContactForm";
 import "../css/Contact.css";
 import firebase from "../firebase";
+import axios from "axios";
 
 const INITIAL_STATE = {
   subject: "",
@@ -40,6 +41,40 @@ const ContactForm = (props) => {
     handleCreateForm
   );
 
+  const [get, setGet] = React.useState("");
+
+  function postEmail() {
+    const getter = values.message;
+    setGet(getter);
+    axios({
+      url: `http://localhost:80/contactforms/email`,
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      //es-lint disable next line
+      data: { email: values.email, message: values.message },
+    }).then((res) => {
+      console.log(res);
+      console.log(res.data);
+    });
+  }
+
+  function getEmails() {
+    axios({
+      url: `http://localhost:80/contactforms/email`,
+      method: "get",
+      headers: { "Content-Type": "application/json" },
+      //es-lint disable next line
+    }).then((res) => {
+      console.log(res);
+      console.log(res.data);
+
+      console.log(
+        "email: " + res.data[0].email,
+        "message: " + res.data[0].message
+      );
+    });
+  }
+
   function handleCreateForm() {
     const { subject, name, phoneNumber, email, message } = values;
 
@@ -52,18 +87,7 @@ const ContactForm = (props) => {
     };
 
     firebase.db.collection("contactforms").add(newFormFill);
-
-    firebase.db
-      .collection("jayblar@gmail.com")
-      .add({
-        to: "chris@btwebgroup.com",
-        message: {
-          subject: values.subject,
-          text: "",
-          html: `Name: ${values.name} phone number: ${values.phoneNumber} email: ${values.email} message: ${values.message}`,
-        },
-      })
-      .then(() => console.log("Queued email for delivery!"));
+    postEmail();
   }
 
   const [busy, setBusy] = React.useState(false);
@@ -85,7 +109,7 @@ const ContactForm = (props) => {
               I'm Open for Business...
             </IonCardTitle>
             <IonCardContent>
-              Have questions? Want to Inquire about a new website build?
+              Have questions? Want to Inquire about a new website build?{get}
             </IonCardContent>
           </IonCard>
           <IonGrid>
@@ -155,6 +179,17 @@ const ContactForm = (props) => {
                           disabled={isSubmitting}
                         >
                           Send!
+                        </IonButton>
+
+                        <IonButton
+                          type="button"
+                          color="primary"
+                          expand="block"
+                          fill="solid"
+                          onClick={getEmails}
+                          disabled={isSubmitting}
+                        >
+                          Test GET
                         </IonButton>
                       </IonCol>
                     </IonRow>
