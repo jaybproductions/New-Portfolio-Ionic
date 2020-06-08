@@ -42,6 +42,14 @@ const ContactForm = (props) => {
   );
 
   const [get, setGet] = React.useState("");
+  const [keywords, setKeywords] = React.useState([]);
+  const [isBlocked, setIsBlocked] = React.useState(null);
+  const [gotData, setGotData] = React.useState(null);
+  let blocked;
+
+  React.useEffect(() => {
+    getKeywords();
+  }, [!gotData]);
 
   function postEmail() {
     const getter = values.message;
@@ -52,27 +60,7 @@ const ContactForm = (props) => {
       headers: { "Content-Type": "application/json" },
       //es-lint disable next line
       data: { email: values.email, message: values.message },
-    }).then((res) => {
-      console.log(res);
-      console.log(res.data);
-    });
-  }
-
-  function getEmails() {
-    axios({
-      url: `http://localhost:80/contactforms/email`,
-      method: "get",
-      headers: { "Content-Type": "application/json" },
-      //es-lint disable next line
-    }).then((res) => {
-      console.log(res);
-      console.log(res.data);
-
-      console.log(
-        "email: " + res.data[0].email,
-        "message: " + res.data[0].message
-      );
-    });
+    }).then((res) => {});
   }
 
   function handleCreateForm() {
@@ -86,14 +74,44 @@ const ContactForm = (props) => {
       message: values.message,
     };
 
-    firebase.db.collection("contactforms").add(newFormFill);
-    postEmail();
+    checkKeywords();
+
+    axios({
+      url: `http://localhost:81/users/bjWKTCQOWxRP3NEpRvmY6TC0Lv02/${
+        blocked ? "blockedemails" : "sentemails"
+      }`,
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      data: { newFormFill },
+    }).then((res) => {});
+  }
+
+  function getKeywords() {
+    axios({
+      url: `http://localhost:81/users/bjWKTCQOWxRP3NEpRvmY6TC0Lv02/keywords`,
+      method: "get",
+      headers: { "Content-Type": "application/json" },
+    }).then((res) => {
+      setKeywords(res.data[0].keywords);
+
+      setGotData(true);
+    });
+  }
+
+  function checkKeywords() {
+    blocked = false;
+    const { subject, name, phoneNumber, email, message } = values;
+    keywords.forEach((keyword) => {
+      if (message.indexOf(keyword) > -1) {
+        blocked = true;
+      }
+    });
   }
 
   const [busy, setBusy] = React.useState(false);
 
   return (
-    <div class="contact-form" id="contact-form">
+    <div className="contact-form" id="contact-form">
       <IonPage>
         <IonLoading message={"Please wait..."} isOpen={busy} />
         <IonContent>
@@ -186,7 +204,7 @@ const ContactForm = (props) => {
                           color="primary"
                           expand="block"
                           fill="solid"
-                          onClick={getEmails}
+                          onClick={checkKeywords}
                           disabled={isSubmitting}
                         >
                           Test GET
