@@ -49,7 +49,7 @@ const ContactForm = (props) => {
 
   React.useEffect(() => {
     getKeywords();
-  }, [!gotData]);
+  }, [gotData]);
 
   function postEmail() {
     const getter = values.message;
