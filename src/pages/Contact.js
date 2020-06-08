@@ -198,17 +198,6 @@ const ContactForm = (props) => {
                         >
                           Send!
                         </IonButton>
-
-                        <IonButton
-                          type="button"
-                          color="primary"
-                          expand="block"
-                          fill="solid"
-                          onClick={checkKeywords}
-                          disabled={isSubmitting}
-                        >
-                          Test GET
-                        </IonButton>
                       </IonCol>
                     </IonRow>
                   </IonCardContent>
