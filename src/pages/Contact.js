@@ -44,7 +44,7 @@ const ContactForm = (props) => {
   const [get, setGet] = React.useState("");
   const [keywords, setKeywords] = React.useState([]);
   const [isBlocked, setIsBlocked] = React.useState(null);
-  const [gotData, setGotData] = React.useState(null);
+  const [gotData, setGotData] = React.useState(false);
   let blocked;
 
   React.useEffect(() => {
@@ -92,7 +92,7 @@ const ContactForm = (props) => {
       method: "get",
       headers: { "Content-Type": "application/json" },
     }).then((res) => {
-      setKeywords(res.data[0].keywords);
+      setKeywords(res.data[0].updatedKeywords);
 
       setGotData(true);
     });
