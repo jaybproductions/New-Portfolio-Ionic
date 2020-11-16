@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   IonPage,
   IonContent,
@@ -19,12 +19,8 @@ import {
   IonTitle,
 } from "@ionic/react";
 import useForm from "../hooks/useForm";
-
-import toast from "../helpers/toast";
 import validateContactForm from "../validators/validateContactForm";
 import "../css/Contact.css";
-import firebase from "../firebase";
-import axios from "axios";
 
 const INITIAL_STATE = {
   subject: "",
@@ -37,78 +33,22 @@ const INITIAL_STATE = {
 const ContactForm = (props) => {
   const { handleSubmit, handleChange, values, isSubmitting } = useForm(
     INITIAL_STATE,
-    validateContactForm,
-    handleCreateForm
+    validateContactForm
   );
 
-  const [get, setGet] = React.useState("");
-  const [keywords, setKeywords] = React.useState([]);
-  const [isBlocked, setIsBlocked] = React.useState(null);
-  const [gotData, setGotData] = React.useState(false);
-  let blocked;
-
-  React.useEffect(() => {
-    getKeywords();
-  }, [gotData]);
-
-  function postEmail() {
-    const getter = values.message;
-    setGet(getter);
-    axios({
-      url: `http://localhost:80/contactforms/email`,
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      //es-lint disable next line
-      data: { email: values.email, message: values.message },
-    }).then((res) => {});
-  }
-
-  function handleCreateForm() {
-    const { subject, name, phoneNumber, email, message } = values;
-
-    const newFormFill = {
-      subject: values.subject,
-      name: values.name,
-      phoneNumber: values.phoneNumber,
-      email: values.email,
-      message: values.message,
-    };
-
-    checkKeywords();
-
-    axios({
-      url: `http://localhost:81/users/bjWKTCQOWxRP3NEpRvmY6TC0Lv02/${
-        blocked ? "blockedemails" : "sentemails"
-      }`,
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      data: { newFormFill },
-    }).then((res) => {});
-  }
-
-  function getKeywords() {
-    axios({
-      url: `http://localhost:81/users/bjWKTCQOWxRP3NEpRvmY6TC0Lv02/keywords`,
-      method: "get",
-      headers: { "Content-Type": "application/json" },
-    }).then((res) => {
-      setKeywords(res.data[0].updatedKeywords);
-
-      setGotData(true);
-    });
-  }
-
-  function checkKeywords() {
-    blocked = false;
-    const { subject, name, phoneNumber, email, message } = values;
-    keywords.forEach((keyword) => {
-      if (message.indexOf(keyword) > -1) {
-        blocked = true;
-      }
-    });
-  }
-
-  const [busy, setBusy] = React.useState(false);
+  const [get, setGet] = useState("");
+  const [keywords, setKeywords] = useState([]);
+  const [isBlocked, setIsBlocked] = useState(null);
+  const [gotData, setGotData] = useState(false);
+  const { subject, name, phoneNumber, email, message } = values;
+  const [busy, setBusy] = useState(false);
+  const newFormFill = {
+    subject: values.subject,
+    name: values.name,
+    phoneNumber: values.phoneNumber,
+    email: values.email,
+    message: values.message,
+  };
 
   return (
     <div className="contact-form" id="contact-form">
