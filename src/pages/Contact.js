@@ -36,10 +36,6 @@ const ContactForm = (props) => {
     validateContactForm
   );
 
-  const [get, setGet] = useState("");
-  const [keywords, setKeywords] = useState([]);
-  const [isBlocked, setIsBlocked] = useState(null);
-  const [gotData, setGotData] = useState(false);
   const { subject, name, phoneNumber, email, message } = values;
   const [busy, setBusy] = useState(false);
   const newFormFill = {
@@ -67,7 +63,7 @@ const ContactForm = (props) => {
               I'm Open for Business...
             </IonCardTitle>
             <IonCardContent>
-              Have questions? Want to Inquire about a new website build?{get}
+              Have questions? Want to Inquire about a new website build?
             </IonCardContent>
           </IonCard>
           <IonGrid>

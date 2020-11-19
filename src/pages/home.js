@@ -24,9 +24,7 @@ const Home = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Home</IonTitle>
-        </IonToolbar>
+        
       </IonHeader>
       <IonContent>
         <HeroSection />
@@ -52,7 +50,7 @@ const Home = () => {
         </IonGrid>
       </IonContent>
       <IonFooter>
-        <IonToolbar color="primary">
+        <IonToolbar style={{backgroundImage: "linear-gradient(to right, #0f0c29, #302b63, #24243e)"}}>
           <IonTitle
             style={{
               fontSize: "14px",

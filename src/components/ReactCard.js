@@ -25,7 +25,9 @@ const ReactCard = ({ viewmorebutton }) => {
         <IonCardContent>
           <h2>Featured React Project: Client Communication App</h2>
           <br></br>
-          <h2>Skills Used</h2>
+          <h2>
+            <b>Skills Used</b>
+          </h2>
           <IonList lines="none">
             <IonItem>Ionic Framework</IonItem>
             <IonItem>Firebase for auth, hosting and database</IonItem>

@@ -23,9 +23,13 @@ const WordpressCard = () => {
           </strong>
         </IonCardHeader>
         <IonCardContent>
-          <h2>Featured Wordpress Project: eBay Seller's Blog</h2>
+          <h2>
+            <b>Featured Wordpress Project:</b> eBay Seller's Blog
+          </h2>
           <br></br>
-          <h2>Skills Used</h2>
+          <h2>
+            <b>Skills Used</b>
+          </h2>
           <IonList lines="none">
             <IonItem>DevOps - Setting up hosting, managing cPanel</IonItem>
             <IonItem>Design and UI</IonItem>
