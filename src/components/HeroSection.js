@@ -15,7 +15,13 @@ const HeroSection = () => {
     <div>
       <IonGrid>
         <IonRow>
-          <IonCol size="12" style={{backgroundImage:"linear-gradient(to right, #0f0c29, #302b63, #24243e)"}}>
+          <IonCol
+            size="12"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+            }}
+          >
             <IonCard mode="ios">
               <IonCardHeader
                 style={{
@@ -36,7 +42,9 @@ const HeroSection = () => {
                   color: "white",
                 }}
               >
-                <center>Web Designer, Software Developer, Mobile App Creator </center>
+                <center>
+                  Web Designer, Software Developer, Mobile App Creator{" "}
+                </center>
                 <div style={{ paddingTop: "10px" }} className="social-links">
                   <center>
                     {" "}

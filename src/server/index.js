@@ -25,6 +25,18 @@ app.post("/contactforms/email", (req, res) => {
   return res.send("dog added!");
 });
 
+let blogposts = [];
+
+app.get("/add/blog", (req, res) => {
+  res.json(blogposts);
+});
+
+app.post("/add/blog", (req, res) => {
+  const post = req.body;
+
+  blogposts.unshift(post);
+});
+
 app.listen(80, () => {
   console.log("Server is listening!");
 });

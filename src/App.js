@@ -15,11 +15,14 @@ import {
   trendingUpOutline,
   documentTextOutline,
   chatbubbleOutline,
+  folderOutline,
 } from "ionicons/icons";
 import Home from "./pages/home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -40,6 +43,7 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import ToggleDark from "./components/ToggleDark";
+import AddNewPost from "./pages/AddNewPost";
 
 const App = () => (
   <IonApp>
@@ -48,8 +52,12 @@ const App = () => (
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/projects" component={Projects} exact={true} />
-          <Route path="/resume" component={Resume} />
+          <Route path="/resume" component={Resume} exact={true} />
           <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={Blog} exact={true} />
+          <Route path="/blog/add" component={AddNewPost} exact={true} />
+          <Route path="/blog/:blogpost" component={BlogPost} />
+
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="top">
@@ -65,11 +73,15 @@ const App = () => (
             <IonIcon icon={documentTextOutline} />
             <IonLabel>Resume</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/contact">
+          <IonTabButton tab="tab4" href="/blog">
+            <IonIcon icon={folderOutline} />
+            <IonLabel>Blog</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab5" href="/contact">
             <IonIcon icon={chatbubbleOutline} />
             <IonLabel>Contact</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab5">
+          <IonTabButton tab="tab6">
             <ToggleDark />
           </IonTabButton>
         </IonTabBar>
