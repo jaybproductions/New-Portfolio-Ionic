@@ -32,7 +32,9 @@ const Blog = () => {
             <IonTitle>Blog</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <div className="blog"></div>
+        <div className="blog" style={{ padding: "10px" }}>
+          <h1>Coming soon....</h1>
+        </div>
       </IonContent>
     </IonPage>
   );
