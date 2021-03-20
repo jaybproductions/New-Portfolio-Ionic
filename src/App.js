@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route, withRouter } from "react-router-dom";
 import {
   IonApp,
   IonIcon,
@@ -48,14 +48,14 @@ import AddNewPost from "./pages/AddNewPost";
 const App = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
+      <IonTabs id="tab-bar">
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/projects" component={Projects} exact={true} />
           <Route path="/resume" component={Resume} exact={true} />
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} exact={true} />
-          <Route path="/blog/add" component={AddNewPost} exact={true} />
+          <Route exact path="/add" component={AddNewPost} />
           <Route path="/blog/:blogpost" component={BlogPost} />
 
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
@@ -69,10 +69,7 @@ const App = () => (
             <IonIcon icon={trendingUpOutline} />
             <IonLabel>Projects</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/resume">
-            <IonIcon icon={documentTextOutline} />
-            <IonLabel>Resume</IonLabel>
-          </IonTabButton>
+
           <IonTabButton tab="tab4" href="/blog">
             <IonIcon icon={folderOutline} />
             <IonLabel>Blog</IonLabel>

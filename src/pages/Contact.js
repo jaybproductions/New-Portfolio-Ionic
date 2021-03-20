@@ -60,10 +60,10 @@ const ContactForm = (props) => {
                 fontSize: "24px",
               }}
             >
-              I'm Open for Business...
+              Get in Touch...
             </IonCardTitle>
             <IonCardContent>
-              Have questions? Want to Inquire about a new website build?
+              Have questions? Want to know more about me or what I do?
             </IonCardContent>
           </IonCard>
           <IonGrid>

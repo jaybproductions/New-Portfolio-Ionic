@@ -3,69 +3,46 @@ import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import {
   IonPage,
   IonContent,
-  IonLabel,
   IonInput,
-  IonRow,
-  IonCol,
-  IonButton,
-  IonItem,
-  IonLoading,
-  IonTextarea,
-  IonCard,
-  IonCardContent,
-  IonGrid,
-  IonCardTitle,
-  IonFooter,
   IonToolbar,
   IonTitle,
   IonHeader,
 } from "@ionic/react";
-import useForm from "../hooks/useForm";
-import validateContactForm from "../validators/validateContactForm";
 import "../css/Contact.css";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import axios from "axios";
+import draftToHtml from "draftjs-to-html";
 
 const AddNewPost = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [data, setData] = useState("");
   const [blogPosts, setBlogPosts] = useState([]);
+  const [title, setTitle] = useState("");
   const [postEditorState, setPostEditorState] = useState(
     EditorState.createEmpty()
   );
 
-  useEffect(() => {
-    getBlogPosts();
-  }, []);
-
   const handleEditorChange = (e) => {
     setEditorState(e);
+
     const editorJSON = convertToRaw(e.getCurrentContent());
-    setData(editorJSON);
-    console.log(editorJSON);
-  };
-
-  const handleEditorSave = (e) => {
-    console.log(data);
-  };
-
-  const getBlogPosts = async () => {
-    const response = await axios.get("http://localhost:80/add/blog");
-    const data = response.data;
-    data.map((post, index) => {
-      console.log(post.data.blocks[0].text);
-    });
-
-    setBlogPosts(data);
+    setData(draftToHtml(editorJSON));
   };
 
   const handleAddBlogPost = async () => {
-    const response = await axios.post("http://localhost:80/add/blog", {
-      data,
-    });
+    const response = await axios.post(
+      "https://portfolio-jaybprod.herokuapp.com/add/blog" ||
+        "http://localhost:80/add/blog",
+      {
+        data: {
+          data: data,
+          title: title,
+        },
+      }
+    );
 
-    console.log(response);
+    console.log("blog post has been added!");
   };
   return (
     <IonPage>
@@ -80,7 +57,12 @@ const AddNewPost = () => {
             className="title"
             style={{ width: "50%", margin: "auto", alignContent: "center" }}
           >
-            <IonInput>Title</IonInput>
+            <IonInput
+              value={title}
+              onIonChange={(e) => setTitle(e.target.value)}
+            >
+              Title
+            </IonInput>
           </div>
           <div
             className="editor"
@@ -95,15 +77,6 @@ const AddNewPost = () => {
             />
           </div>
           <button onClick={handleAddBlogPost}>Save</button>
-          <div>
-            {blogPosts.map((post, index) => (
-              <>
-                <h1>Title</h1>
-                {post.data.blocks[0].text}
-                <br />
-              </>
-            ))}
-          </div>
         </div>
       </IonContent>
     </IonPage>

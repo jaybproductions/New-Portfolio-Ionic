@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IonContent,
   IonHeader,
@@ -12,20 +12,17 @@ import {
 } from "@ionic/react";
 
 import "./Tab1.css";
-import ReactCard from "../components/ReactCard";
 import HeroSection from "../components/HeroSection";
 import AboutMe from "../components/AboutMe";
-import PythonCard from "../components/PythonCard";
-import WordpressCard from "../components/WordpressCard";
-import CsharpCard from "../components/CsharpCard";
-import background from "../images/Lawrencium.jpg";
+
+import BlogCard from "../components/BlogCard";
+import ProjectsCard from "../components/ProjectsCard";
+import ContactCard from "../components/ContactCard";
 
 const Home = () => {
   return (
     <IonPage>
-      <IonHeader>
-        
-      </IonHeader>
+      <IonHeader></IonHeader>
       <IonContent>
         <HeroSection />
         <IonHeader translucent="true"></IonHeader>
@@ -33,24 +30,24 @@ const Home = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <ReactCard />
+              <ProjectsCard />
             </IonCol>
             <IonCol>
-              <PythonCard />
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <WordpressCard />
+              <BlogCard />
             </IonCol>
             <IonCol>
-              <CsharpCard />
+              <ContactCard />
             </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
       <IonFooter>
-        <IonToolbar style={{backgroundImage: "linear-gradient(to right, #0f0c29, #302b63, #24243e)"}}>
+        <IonToolbar
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+          }}
+        >
           <IonTitle
             style={{
               fontSize: "14px",

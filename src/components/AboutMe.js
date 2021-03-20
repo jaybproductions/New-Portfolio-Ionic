@@ -8,10 +8,9 @@ import {
   IonCol,
 } from "@ionic/react";
 
-
 const AboutMe = () => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <IonGrid>
         <IonRow>
           <IonCol>
@@ -20,20 +19,12 @@ const AboutMe = () => {
                 <h2>About Me</h2>
               </IonCardHeader>
               <IonCardContent>
-                <p style={{fontSize:"18px", color: "white",}}>
+                <p style={{ fontSize: "18px", color: "primary" }}>
                   Hello. My name is Jacob. I am a web developer and mobile app
                   developer that focuses on 2 things. Design and functionality.{" "}
                   <br></br>On this site I will showcase some of my work and lay
-                  out my skillset. I look forward to hearing from you soon!
-                  Thanks.<br></br>
-                </p>
-                <h2 style={{ paddingTop: "10px" }}>
-                  <b>Why me?</b>
-                </h2>{" "}
-                <p style={{fontSize:"18px", color: "white",}}>
-                  I am a professional in the industry. I have experience working
-                  for an agency as well as freelance work. I can create beautiful websites custom to your business in the platform of your choosing. 
-
+                  out my skillset. Feel free to reach out if you have any
+                  questions! Thanks.<br></br>
                 </p>
               </IonCardContent>
             </IonCard>
