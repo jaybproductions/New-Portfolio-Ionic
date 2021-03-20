@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "draft-js": "^0.11.7",
     "draftjs-to-html": "^0.9.1",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "firebase": "^7.15.0",
     "firebase-admin": "^9.4.2",

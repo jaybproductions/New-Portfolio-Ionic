@@ -7,6 +7,7 @@ import {
   IonToolbar,
   IonTitle,
   IonHeader,
+  IonButton,
 } from "@ionic/react";
 import "../css/Contact.css";
 import { Editor } from "react-draft-wysiwyg";
@@ -32,7 +33,7 @@ const AddNewPost = () => {
 
   const handleAddBlogPost = async () => {
     const response = await axios.post(
-      "https://portfolio-jaybprod.herokuapp.com/add/blog" ||
+      "https://el5z8q1uj3.execute-api.us-east-1.amazonaws.com/dev/add/blog" ||
         "http://localhost:80/add/blog",
       {
         data: {
@@ -44,6 +45,7 @@ const AddNewPost = () => {
 
     console.log("blog post has been added!");
   };
+
   return (
     <IonPage>
       <IonContent>
@@ -64,10 +66,7 @@ const AddNewPost = () => {
               Title
             </IonInput>
           </div>
-          <div
-            className="editor"
-            style={{ width: "50%", margin: "auto", alignContent: "center" }}
-          >
+          <div className="editor" style={{ width: "50%", margin: "auto" }}>
             <Editor
               editorState={editorState}
               toolbarClassName="toolbarClassName"
@@ -76,7 +75,9 @@ const AddNewPost = () => {
               onEditorStateChange={handleEditorChange}
             />
           </div>
-          <button onClick={handleAddBlogPost}>Save</button>
+          <div style={{ width: "50%", margin: "auto" }}>
+            <IonButton onClick={handleAddBlogPost}>Save</IonButton>
+          </div>
         </div>
       </IonContent>
     </IonPage>

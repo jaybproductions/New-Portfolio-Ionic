@@ -21,30 +21,41 @@ import {
 import useForm from "../hooks/useForm";
 import validateContactForm from "../validators/validateContactForm";
 import "../css/Contact.css";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_tx21oqUQT3vZgEB5eIcic");
 
 const INITIAL_STATE = {
-  subject: "",
   name: "",
-  phoneNumber: "",
   email: "",
   message: "",
 };
 
 const ContactForm = (props) => {
+  const sendEmail = () => {
+    emailjs.send("service_y3zpdf9", "template_prvp9x8", newFormFill).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  };
+
   const { handleSubmit, handleChange, values, isSubmitting } = useForm(
     INITIAL_STATE,
-    validateContactForm
+    validateContactForm,
+    sendEmail
   );
 
-  const { subject, name, phoneNumber, email, message } = values;
-  const [busy, setBusy] = useState(false);
   const newFormFill = {
-    subject: values.subject,
     name: values.name,
-    phoneNumber: values.phoneNumber,
     email: values.email,
     message: values.message,
   };
+
+  const [busy, setBusy] = useState(false);
 
   return (
     <div className="contact-form" id="contact-form">
@@ -72,32 +83,12 @@ const ContactForm = (props) => {
                 <IonCard>
                   <IonCardContent>
                     <IonItem lines="full">
-                      <IonLabel position="floating">Subject</IonLabel>
-                      <IonInput
-                        name="subject"
-                        type="text"
-                        required
-                        value={values.subject}
-                        onIonChange={handleChange}
-                      ></IonInput>
-                    </IonItem>
-                    <IonItem lines="full">
                       <IonLabel position="floating">Name</IonLabel>
                       <IonInput
                         name="name"
                         type="text"
                         required
                         value={values.name}
-                        onIonChange={handleChange}
-                      ></IonInput>
-                    </IonItem>
-                    <IonItem lines="full">
-                      <IonLabel position="floating">Phone</IonLabel>
-                      <IonInput
-                        name="phoneNumber"
-                        type="text "
-                        required
-                        value={values.phoneNumber}
                         onIonChange={handleChange}
                       ></IonInput>
                     </IonItem>

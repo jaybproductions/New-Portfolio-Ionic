@@ -29,7 +29,7 @@ function useForm(initialState, validate, action) {
 
   function handleSubmit() {
     const validationErrors = validate(values);
-    toast("Thanks for your message! I will be in touch soon.", 2000);
+    toast("Thanks for your message! I will be in touch soon.", 4000);
     setErrors(validationErrors);
     setSubmitting(true);
   }
