@@ -114,7 +114,7 @@ const Projects = () => {
                   justifyContent: "center",
                 }}
               >
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Hacker Forums Clone"}
                     content={"Hello"}
@@ -124,7 +124,7 @@ const Projects = () => {
                     link="https://github.com/jaybproductions/ReactNewsApp"
                   />
                 </IonCol>
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"QR Code Generator"}
                     content={"Hello"}
@@ -132,7 +132,7 @@ const Projects = () => {
                     skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
                   />
                 </IonCol>
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Spam filter for contact forms to email"}
                     content={"Hello"}
@@ -169,7 +169,7 @@ const Projects = () => {
                     link="https://github.com/jaybproductions/pythonreportautomator"
                   />
                 </IonCol>
-                <IonCol size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -182,7 +182,7 @@ const Projects = () => {
                   justifyContent: "center",
                 }}
               >
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"FPS Game Template for Unity"}
                     content={"Work in progress..."}
@@ -190,7 +190,7 @@ const Projects = () => {
                     link={"https://github.com/jaybproductions/FPSUnityTemplate"}
                   />
                 </IonCol>
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Unity Mobile Game"}
                     content={"Work in progress..."}
@@ -200,7 +200,7 @@ const Projects = () => {
                     }
                   />
                 </IonCol>
-                <IonCol size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -213,15 +213,15 @@ const Projects = () => {
                   justifyContent: "center",
                 }}
               >
-                <IonCol size-sm="3"></IonCol>
-                <IonCol size-sm="3">
+                <IonCol size="12" size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Wordpress Projects Coming Soon..."}
                     content={"More Projects are being added frequently."}
                     skills={"Please check back later."}
                   />
                 </IonCol>
-                <IonCol size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>

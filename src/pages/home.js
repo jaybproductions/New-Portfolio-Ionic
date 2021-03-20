@@ -27,15 +27,16 @@ const Home = () => {
         <HeroSection />
         <IonHeader translucent="true"></IonHeader>
         <AboutMe />
+
         <IonGrid>
-          <IonRow>
-            <IonCol>
+          <IonRow style={{ justifyContent: "center" }}>
+            <IonCol size="12" size-sm="3">
               <ProjectsCard />
             </IonCol>
-            <IonCol>
+            <IonCol size="12" size-sm="3">
               <BlogCard />
             </IonCol>
-            <IonCol>
+            <IonCol size="12" size-sm="3">
               <ContactCard />
             </IonCol>
           </IonRow>
