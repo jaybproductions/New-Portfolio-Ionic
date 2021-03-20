@@ -21,15 +21,15 @@ const Blog = () => {
   useEffect(() => {
     setLoading(true);
     getPosts();
+    setLoading(false);
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     getFilteredPosts();
+    setLoading(false);
   }, [filter]);
 
-  useEffect(() => {
-    setLoading(false);
-  }, [posts]);
   const getPosts = async () => {
     const response = await axios.get(
       "https://el5z8q1uj3.execute-api.us-east-1.amazonaws.com/dev/posts" ||
@@ -64,17 +64,24 @@ const Blog = () => {
   return (
     <IonPage>
       <IonContent>
-        {loading && <IonSpinner />}
         <IonHeader>
           <IonToolbar>
             <IonTitle>Blog</IonTitle>
             <IonSearchbar value={filter} onKeyPress={handleChange} />
           </IonToolbar>
         </IonHeader>
-        <div className="blog" style={{ padding: "10px" }}>
-          {!filter && <BlogPostList posts={posts} />}
-          {filter && <BlogPostList posts={filteredPosts} />}
-        </div>
+        {loading ? (
+          <div style={{ width: "50%", margin: "auto", padding: "30px" }}>
+            <IonSpinner />
+          </div>
+        ) : (
+          <>
+            <div className="blog" style={{ padding: "10px" }}>
+              {!filter && <BlogPostList posts={posts} />}
+              {filter && <BlogPostList posts={filteredPosts} />}
+            </div>{" "}
+          </>
+        )}
       </IonContent>
     </IonPage>
   );

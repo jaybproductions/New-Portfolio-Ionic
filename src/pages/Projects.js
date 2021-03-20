@@ -116,14 +116,6 @@ const Projects = () => {
               >
                 <IonCol size-sm="3">
                   <ProjectCard
-                    title={"Corona Virus Tracker App"}
-                    content={"This project was made"}
-                    skills={"React, HTML, CSS, API integration"}
-                    link="https://github.com/jaybproductions/ReactCoronaApp"
-                  />
-                </IonCol>
-                <IonCol size-sm="3">
-                  <ProjectCard
                     title={"Hacker Forums Clone"}
                     content={"Hello"}
                     skills={
@@ -140,6 +132,7 @@ const Projects = () => {
                     skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
                   />
                 </IonCol>
+                <IonCol size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
