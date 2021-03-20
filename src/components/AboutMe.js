@@ -16,22 +16,24 @@ const AboutMe = () => {
           <IonCol>
             <IonCard style={{ width: "75%", margin: "auto" }}>
               <IonCardHeader style={{ fontSize: "12px" }}>
-                <h2>About Me</h2>
+                <h2 style={{ textAlign: "left" }}>About Me</h2>
               </IonCardHeader>
               <IonCardContent>
                 <p
                   style={{
                     fontSize: "18px",
                     color: "primary",
-                    width: "50%",
+                    width: "100%",
                     margin: "auto",
                     textAlign: "left",
                   }}
                 >
                   Hello. My name is Jacob. I am a Full Stack Developer with
                   professional experience with mulitple programming languages
-                  and frameworks. On this site I will showcase some of my work
-                  and lay out my skillset.
+                  and frameworks. <br />
+                  <br />
+                  On this site I will showcase some of my work and lay out my
+                  skillset.
                   <br />
                   <br /> I am frequently continuing my learning of new skills
                   and langauges so this page will be updated frequently. Feel
@@ -40,10 +42,12 @@ const AboutMe = () => {
                 </p>
                 <br />
 
-                <h2 style={{ fontSize: "26px" }}>Some Of My Skills</h2>
+                <h2 style={{ fontSize: "26px", textAlign: "left" }}>
+                  Some Of My Skills
+                </h2>
                 <div
                   style={{
-                    width: "50%",
+                    width: "100%",
                     margin: "auto",
                     textAlign: "left",
                   }}
