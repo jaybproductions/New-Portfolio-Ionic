@@ -54,7 +54,7 @@ const Home = () => {
               fontSize: "14px",
             }}
           >
-            <center>2020 JayBProd</center>
+            <center>2021 JayBProd</center>
           </IonTitle>
         </IonToolbar>
       </IonFooter>
