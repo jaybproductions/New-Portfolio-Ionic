@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   tabs: {
     borderRight: `1px solid ${theme.palette.primary}`,
 
-    padding: "10px",
+    padding: "20px",
   },
 
   panel: {
@@ -110,6 +110,48 @@ const Projects = () => {
               <IonRow
                 style={{
                   display: "flex",
+                  alignItems: "top",
+                  justifyContent: "center",
+                }}
+              >
+                <IonCol size="12" size-sm="3">
+                  <ProjectCard
+                    title={"Marketing Platform"}
+                    content={
+                      "This project is a work in progress. This project is a fully featured marketing platform with the ability to purchase AWS Lightsail instances for Wordpres hosting, a fully functional social media calendar, Two way text messaging with Twilio integration, and more."
+                    }
+                    skills={
+                      "React, HTML, CSS, Hooks, Firebase, Reusable components, AWS, Twilio, S3, Lighsail, Stripe API"
+                    }
+                    link="https://github.com/jaybproductions/marketingplatform"
+                  />
+                </IonCol>
+                <IonCol size="12" size-sm="3">
+                  <ProjectCard
+                    title={"QR Code Generator"}
+                    content={
+                      "This project is a work in progress. The goal is to allow users to sign up, store, and share QR codes generated from the site."
+                    }
+                    link="https://github.com/jaybproductions/qr-store"
+                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
+                    liveLink="https://qrstore-ab99e.web.app/home"
+                    loginInfo="Test Login Creds: test@tester.com, test1234"
+                  />
+                </IonCol>
+                <IonCol size="12" size-sm="3">
+                  <ProjectCard
+                    title={"Spam filter for contact forms to email"}
+                    content={
+                      "This project is a work in progress. The goal is to allow users to create a list of keywords to block and the system will check contact form submissions against these keywords and store them for review on the app. "
+                    }
+                    link="https://github.com/jaybproductions/SpamFilter"
+                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
+                  />
+                </IonCol>
+              </IonRow>
+              <IonRow
+                style={{
+                  display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
@@ -117,29 +159,17 @@ const Projects = () => {
                 <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Hacker Forums Clone"}
-                    content={"Hello"}
+                    content={
+                      "This project is a work in progress. The goal of this project was to expand my knowledge of react and learn how to make fully functional web applications. This web app allows users to sign up, create posts, send messages, and create events to share with others."
+                    }
                     skills={
                       "React, HTML, CSS, Hooks, Firebase, Reusable components"
                     }
                     link="https://github.com/jaybproductions/ReactNewsApp"
                   />
                 </IonCol>
-                <IonCol size="12" size-sm="3">
-                  <ProjectCard
-                    title={"QR Code Generator"}
-                    content={"Hello"}
-                    link="https://github.com/jaybproductions/qr-store"
-                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
-                  />
-                </IonCol>
-                <IonCol size="12" size-sm="3">
-                  <ProjectCard
-                    title={"Spam filter for contact forms to email"}
-                    content={"Hello"}
-                    link="https://github.com/jaybproductions/SpamFilter"
-                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
-                  />
-                </IonCol>
+                <IonCol size="12" size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -156,16 +186,20 @@ const Projects = () => {
                 <IonCol size="12" size-sm="3">
                   <ProjectCard
                     title={"Coronavirus Discord Bot"}
-                    content={"Hello"}
-                    skills={"Python, API integration"}
+                    content={
+                      "This project goal was to learn more about the Discord API and to develop a bot so that me and my friends could instantly get the number of COVID cases around the world. "
+                    }
+                    skills={"Python, Discord API, COVID-19 API"}
                     link="https://github.com/jaybproductions/PythonCoronaDiscordBot"
                   />
                 </IonCol>
                 <IonCol size-sm="3">
                   <ProjectCard
                     title={"Automated Report Uploader"}
-                    content={"Hello"}
-                    skills={"Skills"}
+                    content={
+                      "This project was used at an agency to automate the process of downloading, storing, and uploading monthly analytics reports to clients."
+                    }
+                    skills={"webscraping, env variables, loops, functions"}
                     link="https://github.com/jaybproductions/pythonreportautomator"
                   />
                 </IonCol>

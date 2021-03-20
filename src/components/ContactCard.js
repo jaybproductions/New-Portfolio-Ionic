@@ -8,36 +8,35 @@ import {
   IonCol,
   IonButton,
 } from "@ionic/react";
+import { Link } from "react-router-dom";
 
 const ContactCard = () => {
   return (
     <div>
-      <IonCard
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-        }}
-      >
-        <IonCardHeader style={{ fontSize: "16px" }}>
-          <strong>View my Contact Details</strong>
-        </IonCardHeader>
-        <IonCardContent>
-          <h2>
-            Have questions? Need help with any of your projects? Have a
-            suggestion for the blog? Feel free to reach out and I would be glad
-            to help!
-          </h2>
-          <IonGrid>
-            <IonCol>
-              <IonRow>
-                <IonButton color="primary" size="md" routerLink={"/contact"}>
-                  Go ->
-                </IonButton>
-              </IonRow>
-            </IonCol>
-          </IonGrid>
-        </IonCardContent>
-      </IonCard>
+      <Link to="/contact" style={{ textDecoration: "none" }}>
+        <IonCard
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+          }}
+        >
+          <IonCardHeader style={{ fontSize: "16px" }}>
+            <strong>Contact Me</strong>
+          </IonCardHeader>
+          <IonCardContent>
+            <h2>
+              Click here if you have questions, need help with any of your
+              projects, or if you have a suggestion for the blog. Feel free to
+              reach out and I would be glad to help!
+            </h2>
+            <IonGrid>
+              <IonCol>
+                <IonRow></IonRow>
+              </IonCol>
+            </IonGrid>
+          </IonCardContent>
+        </IonCard>
+      </Link>
     </div>
   );
 };
