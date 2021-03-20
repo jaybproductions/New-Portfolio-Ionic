@@ -21,7 +21,6 @@ const ProjectCard = ({ title, content, type, skills, link }) => {
         <IonButton href={link} target="_blank">
           <GitHubIcon />
         </IonButton>
-        <IonButton>View Live</IonButton>
       </IonCardContent>
     </IonCard>
   );

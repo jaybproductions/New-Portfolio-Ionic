@@ -126,13 +126,20 @@ const Projects = () => {
                 </IonCol>
                 <IonCol size-sm="3">
                   <ProjectCard
+                    title={"QR Code Generator"}
+                    content={"Hello"}
+                    link="https://github.com/jaybproductions/qr-store"
+                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
+                  />
+                </IonCol>
+                <IonCol size-sm="3">
+                  <ProjectCard
                     title={"Spam filter for contact forms to email"}
                     content={"Hello"}
                     link="https://github.com/jaybproductions/SpamFilter"
                     skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
                   />
                 </IonCol>
-                <IonCol size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -162,13 +169,7 @@ const Projects = () => {
                     link="https://github.com/jaybproductions/pythonreportautomator"
                   />
                 </IonCol>
-                <IonCol size-sm="3">
-                  <ProjectCard
-                    title={"Python"}
-                    content={"Hello"}
-                    skills={"Skills"}
-                  />
-                </IonCol>
+                <IonCol size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -184,24 +185,22 @@ const Projects = () => {
                 <IonCol size-sm="3">
                   <ProjectCard
                     title={"FPS Game Template for Unity"}
-                    content={"Hello"}
-                    skills={"Skills"}
+                    content={"Work in progress..."}
+                    skills={"Please check back later or view on github."}
+                    link={"https://github.com/jaybproductions/FPSUnityTemplate"}
                   />
                 </IonCol>
                 <IonCol size-sm="3">
                   <ProjectCard
-                    title={"C#"}
-                    content={"Hello"}
-                    skills={"Skills"}
+                    title={"Unity Mobile Game"}
+                    content={"Work in progress..."}
+                    skills={"Please check back later or view on github."}
+                    link={
+                      "https://github.com/jaybproductions/unity-mobile-game"
+                    }
                   />
                 </IonCol>
-                <IonCol size-sm="3">
-                  <ProjectCard
-                    title={"C#"}
-                    content={"Hello"}
-                    skills={"Skills"}
-                  />
-                </IonCol>
+                <IonCol size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
@@ -214,27 +213,15 @@ const Projects = () => {
                   justifyContent: "center",
                 }}
               >
+                <IonCol size-sm="3"></IonCol>
                 <IonCol size-sm="3">
                   <ProjectCard
-                    title={"eBay Seller's Blog"}
-                    content={"Hello"}
-                    skills={"Skills"}
+                    title={"Wordpress Projects Coming Soon..."}
+                    content={"More Projects are being added frequently."}
+                    skills={"Please check back later."}
                   />
                 </IonCol>
-                <IonCol size-sm="3">
-                  <ProjectCard
-                    title={"Wordpress"}
-                    content={"Hello"}
-                    skills={"Skills"}
-                  />
-                </IonCol>
-                <IonCol size-sm="3">
-                  <ProjectCard
-                    title={"Wordpress"}
-                    content={"Hello"}
-                    skills={"Skills"}
-                  />
-                </IonCol>
+                <IonCol size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
           </TabPanel>
