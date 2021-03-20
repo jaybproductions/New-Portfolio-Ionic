@@ -32,7 +32,7 @@ const Blog = () => {
   }, [posts]);
   const getPosts = async () => {
     const response = await axios.get(
-      "https://portfolio-jaybprod.herokuapp.com/posts" ||
+      "https://el5z8q1uj3.execute-api.us-east-1.amazonaws.com/dev/posts" ||
         "http://localhost/posts"
     );
     setPosts(response.data);
