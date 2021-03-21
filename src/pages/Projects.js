@@ -124,6 +124,8 @@ const Projects = () => {
                       "React, HTML, CSS, Hooks, Firebase, Reusable components, AWS, Twilio, S3, Lighsail, Stripe API"
                     }
                     link="https://github.com/jaybproductions/marketingplatform"
+                    liveLink="https://marketingplatform-3b5c7.web.app"
+                    loginInfo="Test Login Creds: test@tester.com, test1234"
                   />
                 </IonCol>
                 <IonCol size="12" size-sm="3">
