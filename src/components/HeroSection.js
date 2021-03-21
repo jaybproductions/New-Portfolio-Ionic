@@ -9,7 +9,7 @@ import {
   IonIcon,
 } from "@ionic/react";
 import background from "../images/Lawrencium.jpg";
-import { logoGithub } from "ionicons/icons";
+import { logoGithub, logoLinkedin } from "ionicons/icons";
 const HeroSection = () => {
   return (
     <div>
@@ -56,6 +56,20 @@ const HeroSection = () => {
                         className="github-icon"
                         style={{ paddingTop: "10px", fontSize: "24px" }}
                         icon={logoGithub}
+                      />
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/christopher-blair-22a996209/"
+                      target="_blank"
+                    >
+                      <IonIcon
+                        className="github-icon"
+                        style={{
+                          paddingTop: "10px",
+                          paddingLeft: "10px",
+                          fontSize: "24px",
+                        }}
+                        icon={logoLinkedin}
                       />
                     </a>
                   </center>
