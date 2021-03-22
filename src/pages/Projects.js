@@ -110,7 +110,7 @@ const Projects = () => {
               <IonRow
                 style={{
                   display: "flex",
-                  alignItems: "top",
+                  alignItems: "flex-start",
                   justifyContent: "center",
                 }}
               >
@@ -157,7 +157,7 @@ const Projects = () => {
               <IonRow
                 style={{
                   display: "flex",
-                  alignItems: "center",
+                  alignItems: "flex-start",
                   justifyContent: "center",
                 }}
               >
