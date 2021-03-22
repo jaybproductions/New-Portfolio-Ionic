@@ -116,6 +116,19 @@ const Projects = () => {
               >
                 <IonCol size="12" size-sm="3">
                   <ProjectCard
+                    title={"Reversed Linked List Snake"}
+                    content={
+                      "The classic snake game with a twist. Using a linked list I was able to create this project that reverses the snakes direction when it eats the special food. This project helped me understand the concepts of Linked Lists and how they may be used in a real-world scenario"
+                    }
+                    skills={
+                      "React, HTML, CSS, Hooks, Linked Lists, Functional Programming"
+                    }
+                    link="https://github.com/jaybproductions/snake-game"
+                    liveLink="https://snake-game-f358a.web.app/"
+                  />
+                </IonCol>
+                <IonCol size="12" size-sm="3">
+                  <ProjectCard
                     title={"Marketing Platform"}
                     content={
                       "This project is a work in progress. This project is a fully featured marketing platform with the ability to purchase AWS Lightsail instances for Wordpres hosting, a fully functional social media calendar, Two way text messaging with Twilio integration, and more."
@@ -140,16 +153,6 @@ const Projects = () => {
                     loginInfo="Test Login Creds: test@tester.com, test1234"
                   />
                 </IonCol>
-                <IonCol size="12" size-sm="3">
-                  <ProjectCard
-                    title={"Spam filter for contact forms to email"}
-                    content={
-                      "This project is a work in progress. The goal is to allow users to create a list of keywords to block and the system will check contact form submissions against these keywords and store them for review on the app. "
-                    }
-                    link="https://github.com/jaybproductions/SpamFilter"
-                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
-                  />
-                </IonCol>
               </IonRow>
               <IonRow
                 style={{
@@ -170,7 +173,17 @@ const Projects = () => {
                     link="https://github.com/jaybproductions/ReactNewsApp"
                   />
                 </IonCol>
-                <IonCol size="12" size-sm="3"></IonCol>
+                <IonCol size="12" size-sm="3">
+                  {" "}
+                  <ProjectCard
+                    title={"Spam filter for contact forms to email"}
+                    content={
+                      "This project is a work in progress. The goal is to allow users to create a list of keywords to block and the system will check contact form submissions against these keywords and store them for review on the app. "
+                    }
+                    link="https://github.com/jaybproductions/SpamFilter"
+                    skills={"React, HTML, CSS, Hooks, Firebase, Express, Axios"}
+                  />
+                </IonCol>
                 <IonCol size="12" size-sm="3"></IonCol>
               </IonRow>
             </IonGrid>
