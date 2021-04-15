@@ -24,6 +24,7 @@ const ProjectCard = ({
       </IonCardHeader>
       <IonCardContent>
         {content} <br />
+        <div className="spacing"></div>
         <br />
         <b>Skills Used: {skills}</b>
         <br />

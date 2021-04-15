@@ -19,7 +19,6 @@ const Home = () => {
       <IonHeader></IonHeader>
       <IonContent>
         <HeroSection />
-
         <AboutMe />
         <Projects />
       </IonContent>

@@ -69,7 +69,7 @@ const App = () => (
             tab="tab2"
             onClick={() =>
               document
-                .getElementById("about")
+                .getElementById("projects")
                 .scrollIntoView({ behavior: "smooth" })
             }
           >
