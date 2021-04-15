@@ -1,84 +1,24 @@
 import React from "react";
-import {
-  IonCardHeader,
-  IonCardContent,
-  IonCard,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonIcon,
-} from "@ionic/react";
-import background from "../images/Lawrencium.jpg";
-import { logoGithub, logoLinkedin } from "ionicons/icons";
+import { ReactComponent as CheckMark } from "../images/CheckMark.svg";
 const HeroSection = () => {
   return (
-    <div>
-      <IonGrid>
-        <IonRow>
-          <IonCol
-            size="12"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-            }}
-          >
-            <IonCard mode="ios">
-              <IonCardHeader
-                style={{
-                  fontSize: "16px",
-                  color: "white",
-                  backgroundImage:
-                    "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-                }}
-              >
-                <strong>
-                  <center>Simple, Beautiful, Elegant</center>
-                </strong>
-              </IonCardHeader>{" "}
-              <IonCardContent
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-                  color: "white",
-                }}
-              >
-                <center>
-                  Web Designer, Software Developer, Mobile App Creator{" "}
-                </center>
-                <div style={{ paddingTop: "10px" }} className="social-links">
-                  <center>
-                    {" "}
-                    <a
-                      href="https://github.com/jaybproductions"
-                      target="_blank"
-                    >
-                      <IonIcon
-                        className="github-icon"
-                        style={{ paddingTop: "10px", fontSize: "24px" }}
-                        icon={logoGithub}
-                      />
-                    </a>
-                    <a
-                      href="https://linkedin.com/in/christopher-blair-22a996209/"
-                      target="_blank"
-                    >
-                      <IonIcon
-                        className="github-icon"
-                        style={{
-                          paddingTop: "10px",
-                          paddingLeft: "10px",
-                          fontSize: "24px",
-                        }}
-                        icon={logoLinkedin}
-                      />
-                    </a>
-                  </center>
-                </div>
-              </IonCardContent>
-            </IonCard>
-          </IonCol>
-        </IonRow>
-      </IonGrid>
+    <div className="hero-section">
+      <div className="hero-title">
+        Hello. <br />
+        My Name is Chris.
+      </div>
+      <hr align="left" className="separator" />
+      <div className="bio">
+        I am a Full Stack Developer with professional experience with mulitple
+        programming languages and frameworks. On this site I will showcase some
+        of my work and lay out my skillset. I am frequently continuing my
+        learning of new skills and langauges so this page will be updated
+        frequently. Feel free to reach out if you have any questions! Thanks.
+      </div>
+      <div className="work">
+        <CheckMark />
+        <p>Available for software work – say hello</p>
+      </div>
     </div>
   );
 };

@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   IonContent,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
-  IonGrid,
-  IonRow,
-  IonCol,
   IonFooter,
 } from "@ionic/react";
-
 import "./Tab1.css";
 import HeroSection from "../components/HeroSection";
 import AboutMe from "../components/AboutMe";
-
-import BlogCard from "../components/BlogCard";
-import ProjectsCard from "../components/ProjectsCard";
-import ContactCard from "../components/ContactCard";
+import "../css/Home.css";
+import Projects from "../components/ProjectsSection";
 
 const Home = () => {
   return (
@@ -25,22 +19,9 @@ const Home = () => {
       <IonHeader></IonHeader>
       <IonContent>
         <HeroSection />
-        <IonHeader translucent="true"></IonHeader>
-        <AboutMe />
 
-        <IonGrid>
-          <IonRow style={{ justifyContent: "center" }}>
-            <IonCol size="12" size-sm="3">
-              <ProjectsCard />
-            </IonCol>
-            <IonCol size="12" size-sm="3">
-              <BlogCard />
-            </IonCol>
-            <IonCol size="12" size-sm="3">
-              <ContactCard />
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+        <AboutMe />
+        <Projects />
       </IonContent>
       <IonFooter>
         <IonToolbar

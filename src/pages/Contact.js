@@ -17,6 +17,7 @@ import {
   IonFooter,
   IonToolbar,
   IonTitle,
+  IonText,
 } from "@ionic/react";
 import useForm from "../hooks/useForm";
 import validateContactForm from "../validators/validateContactForm";
@@ -62,21 +63,13 @@ const ContactForm = (props) => {
       <IonPage>
         <IonLoading message={"Please wait..."} isOpen={busy} />
         <IonContent>
-          <IonCard>
-            <IonCardTitle
-              style={{
-                paddingLeft: "20px",
-                paddingBottom: "10px",
-                paddingTop: "10px",
-                fontSize: "24px",
-              }}
-            >
-              Get in Touch...
-            </IonCardTitle>
-            <IonCardContent>
-              Have questions? Want to know more about me or what I do?
-            </IonCardContent>
-          </IonCard>
+          <div
+            className="text"
+            style={{ paddingTop: "50px", width: "85%", margin: "auto" }}
+          >
+            <h4>Get in Touch...</h4> Have questions? Want to know more about me
+            or what I do?
+          </div>
           <IonGrid>
             <IonRow>
               <IonCol>
