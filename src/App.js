@@ -65,7 +65,14 @@ const App = () => (
             <IonIcon icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/projects">
+          <IonTabButton
+            tab="tab2"
+            onClick={() =>
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
             <IonIcon icon={trendingUpOutline} />
             <IonLabel>Projects</IonLabel>
           </IonTabButton>

@@ -14,7 +14,7 @@ const AboutMe = () => {
       <h3 style={{ width: "80vw", margin: "auto", paddingTop: "50px" }}>
         Skills
       </h3>
-      <div className="about">
+      <div className="about" id="about">
         <div className="left-side">Picture goes here</div>
         <div className="right-side">
           <h2 style={{ fontSize: "26px", textAlign: "left" }}>
