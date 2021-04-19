@@ -68,7 +68,13 @@ const ContactForm = (props) => {
             style={{ paddingTop: "50px", width: "85%", margin: "auto" }}
           >
             <h4>Get in Touch...</h4> Have questions? Want to know more about me
-            or what I do?
+            or what I do?{" "}
+            <div style={{ padding: "10px" }}>
+              Email:{" "}
+              <a href="mailto:jaybgameproductions@gmail.com">
+                jaybgameproductions@gmail.com
+              </a>
+            </div>
           </div>
           <IonGrid>
             <IonRow>

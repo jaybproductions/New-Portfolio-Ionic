@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as CheckMark } from "../images/CheckMark.svg";
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className="hero-section">
@@ -9,15 +10,16 @@ const HeroSection = () => {
       </div>
       <hr align="left" className="separator" />
       <div className="bio">
-        I am a Full Stack Developer with professional experience with mulitple
-        programming languages and frameworks. On this site I will showcase some
-        of my work and lay out my skillset. I am frequently continuing my
-        learning of new skills and langauges so this page will be updated
-        frequently. Feel free to reach out if you have any questions! Thanks.
+        I am a Software Developer with professional experience in mulitple
+        programming languages and frameworks. I have a passion for learning new
+        technologies and continuing to expand my skillset. Feel free to reach
+        out if you have any questions! Thanks.
       </div>
       <div className="work">
         <CheckMark />
-        <p>Available for software work – say hello</p>
+        <p>
+          Available for software work – say <Link to="/contact">hello</Link>
+        </p>
       </div>
     </div>
   );
