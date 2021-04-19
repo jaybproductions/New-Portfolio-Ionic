@@ -11,7 +11,6 @@ import ProjectCard from "../components/ProjectCard";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    display: "inline-block",
     width: "100%",
   },
   tabs: {
@@ -68,15 +67,18 @@ function ProjectsSection() {
   };
   return (
     <div className="projects" id="projects">
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <div className={classes.root}>
         <Tabs
           orientation="horizontal"
+          indicatorColor="primary"
           variant="scrollable"
+          scrollButtons="auto"
           value={value}
           onChange={handleChange}
-          aria-label="Vertical tabs example"
+          aria-label="scrollable auto tabs example"
           className={classes.tabs}
+          textColor="primary"
         >
           <Tab label="React Projects" {...a11yProps(0)} />
           <Tab label="Python Projects" {...a11yProps(1)} />

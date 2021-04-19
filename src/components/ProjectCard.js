@@ -18,7 +18,7 @@ const ProjectCard = ({
   loginInfo,
 }) => {
   return (
-    <IonCard style={{ height: "450px" }}>
+    <IonCard>
       <IonCardHeader>
         <IonCardTitle>{title}</IonCardTitle>
       </IonCardHeader>

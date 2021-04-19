@@ -7,15 +7,15 @@ import {
   IonRow,
   IonCol,
 } from "@ionic/react";
+import DevImg from "../images/dev.jpg";
 
 const AboutMe = () => {
   return (
     <>
-      <h3 style={{ width: "80vw", margin: "auto", paddingTop: "50px" }}>
-        Skills
-      </h3>
       <div className="about" id="about">
-        <div className="left-side">Picture goes here</div>
+        <div className="left-side">
+          <img src={DevImg} width="400" height="400" />
+        </div>
         <div className="right-side">
           <h2 style={{ fontSize: "26px", textAlign: "left" }}>
             Some Of My Skills
@@ -33,7 +33,7 @@ const AboutMe = () => {
               <li>Firebase tools and Admin SDK</li>
 
               <li>REST API development with Node.js and Express.js</li>
-              <li>AWS API knowledge including S3, Lighsail, and Lambda</li>
+              <li>AWS API including S3, Lighsail, and Lambda</li>
               <li>Multiple design libraries such as Material UI and Ionic</li>
               <li>
                 DevOps, Managing Servers for Mulitple Websites, WHM, cPanel,

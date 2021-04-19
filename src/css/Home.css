@@ -42,6 +42,10 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+ul {
+  line-height: 2;
+}
+
 .projects {
   width: 80vw;
   margin: auto;
