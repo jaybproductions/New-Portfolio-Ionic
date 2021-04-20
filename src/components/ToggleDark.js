@@ -16,13 +16,13 @@ const ToggleDark = (props) => {
   return (
     <div className="dark-mode">
       <IonItem>
-        <p>Dark Mode</p>
         <IonToggle
           slot="start"
           onIonChange={toggleDarkModeHandler}
           type="ios"
           checked={isDark}
           style={{ marginRight: "10px", paddingLeft: "15px" }}
+          color="primary"
         />
       </IonItem>
     </div>
