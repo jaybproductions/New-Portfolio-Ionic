@@ -12,6 +12,7 @@ import HeroSection from "../components/HeroSection";
 import AboutMe from "../components/AboutMe";
 import "../css/Home.css";
 import Projects from "../components/ProjectsSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
       <IonContent>
         <HeroSection />
         <AboutMe />
-        <Projects />
+        <ProjectsSection />
       </IonContent>
       <IonFooter>
         <IonToolbar

@@ -10,13 +10,10 @@ import ProjectCard from "../components/ProjectCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     width: "100%",
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.primary}`,
-
-    padding: "20px",
   },
 
   panel: {
@@ -37,7 +34,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={8} style={{ width: "100%" }}>
+        <Box p={0} style={{ width: "100%" }}>
           <Typography>{children}</Typography>
         </Box>
       )}
