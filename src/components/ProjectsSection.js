@@ -70,7 +70,7 @@ function ProjectsSection() {
           orientation="horizontal"
           indicatorColor="primary"
           variant="scrollable"
-          scrollButtons="auto"
+          scrollButtons="on"
           value={value}
           onChange={handleChange}
           aria-label="scrollable auto tabs example"
