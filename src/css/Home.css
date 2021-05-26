@@ -50,3 +50,12 @@ ul {
   width: 80vw;
   margin: auto;
 }
+
+.project-buttons {
+  position: absolute;
+  bottom: 30;
+}
+
+.card-content {
+  position: relative;
+}

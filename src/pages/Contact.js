@@ -65,7 +65,7 @@ const ContactForm = (props) => {
         <IonContent>
           <div
             className="text"
-            style={{ paddingTop: "50px", width: "85%", margin: "auto" }}
+            style={{ paddingTop: "50px", width: "85vw", margin: "auto" }}
           >
             <h4>Get in Touch...</h4> Have questions? Want to know more about me
             or what I do?{" "}
@@ -78,8 +78,8 @@ const ContactForm = (props) => {
           </div>
           <IonGrid>
             <IonRow>
-              <IonCol>
-                <IonCard>
+              <IonCol style={{ paddingTop: "20px" }}>
+                <IonCard style={{ width: "85vw", margin: "auto" }}>
                   <IonCardContent>
                     <IonItem lines="full">
                       <IonLabel position="floating">Name</IonLabel>

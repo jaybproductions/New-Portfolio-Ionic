@@ -18,31 +18,33 @@ const ProjectCard = ({
   loginInfo,
 }) => {
   return (
-    <IonCard style={{ width: "100%" }}>
+    <IonCard style={{ width: "100%", height: "100%" }}>
       <IonCardHeader>
         <IonCardTitle>{title}</IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
-        {content} <br />
-        <div className="spacing"></div>
-        <br />
-        <b>Skills Used: {skills}</b>
-        <br />
-        <br />
-        {loginInfo && (
-          <>
-            {loginInfo} <br />
-            <br />{" "}
-          </>
-        )}
-        <IonButton href={link} target="_blank">
-          <GitHubIcon />
-        </IonButton>
-        {liveLink && (
-          <IonButton href={liveLink} target="_blank">
-            View Live
+        <div className="card-content">
+          {content} <br />
+          <div className="spacing"></div>
+          <br />
+          <b>Skills Used: {skills}</b>
+          <br />
+          <br />
+          {loginInfo && (
+            <>
+              {loginInfo} <br />
+              <br />{" "}
+            </>
+          )}
+          <IonButton href={link} target="_blank" horizontal="end">
+            <GitHubIcon />
           </IonButton>
-        )}
+          {liveLink && (
+            <IonButton href={liveLink} target="_blank">
+              View Live
+            </IonButton>
+          )}
+        </div>
       </IonCardContent>
     </IonCard>
   );
